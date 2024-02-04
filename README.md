@@ -11,3 +11,9 @@ plugins=(
     line-bisect  <--- this line, or add the plugins array if you don't have it already
 )
 ```
+
+Also, make sure this line comes AFTER the loading of plugins in your .zshrc file, ideally at the very end:
+
+```
+source $ZSH/oh-my-zsh.sh
+```
