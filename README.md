@@ -9,6 +9,8 @@ https://github.com/Hoid/line-bisect/assets/15349440/04cf231b-80ed-4202-8402-c0d2
 Clone this repository into your $ZSH/custom/plugins directory. Then go into your ~/.zshrc file and add the following:
 
 ```
+export ZSH=$HOME/
+export ZSH_CUSTOM="$ZSH/custom
 plugins=(
     line-bisect  <--- this line, or add the plugins array if you don't have it already
 )
@@ -19,6 +21,14 @@ Also, make sure this line comes AFTER the loading of plugins in your .zshrc file
 ```
 source $ZSH/oh-my-zsh.sh
 ```
+
+You might also need to add this line to your ~/.zshrc file if the plugin isn't getting found:
+
+```
+source $ZSH_CUSTOM/plugins/line-bisect/line-bisect.plugin.zsh
+```
+
+Change the file location above to be where you installed the plugin.
 
 ## Changing the keybinding
 

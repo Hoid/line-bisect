@@ -1,6 +1,8 @@
 function line-bisect-left {
-  NEW_CURSOR=$(($#LBUFFER / 2))
-  CURSOR=$NEW_CURSOR
+  () {
+    NEW_CURSOR=$(($#LBUFFER / 2))
+    CURSOR=$NEW_CURSOR
+  }
 }
 function line-bisect-right {
   NEW_CURSOR_OFFSET=$(($#RBUFFER / 2))
@@ -19,7 +21,6 @@ zle -N line-bisect-left
 zle -N line-bisect-right
 
 unameOut="$(uname -s)"
-echo "${unameOut}"
 case "${unameOut}" in
 Linux*)
   echo "No Linux setup fn. Please create one in $ZSH/custom/plugins/line-bisect."
