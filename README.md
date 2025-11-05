@@ -16,7 +16,7 @@ plugins=(
 )
 ```
 
-Also, make sure this line comes AFTER the loading of plugins in your .zshrc file, ideally at the very end:
+Also, you might need to add this line AFTER the loading of plugins in your .zshrc file, ideally at the very end, but for some reason my ZSH installation doesn't have this file so only put it if you do have it:
 
 ```
 source $ZSH/oh-my-zsh.sh
